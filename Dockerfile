@@ -14,7 +14,8 @@ ENV JAVA_OPTS -Xmx2G
 ADD ["https://raw.githubusercontent.com/LolHens/docker-tools/master/bin/cleanimage", "/usr/local/bin/"]
 RUN chmod +x "/usr/local/bin/cleanimage"
 
-RUN cd /tmp \
+RUN gu install native-image \
+ && cd /tmp \
  && curl -LO $SBT_URL \
  && tar -xf $SBT_FILE \
  && mv $SBT_NAME $SBT_HOME \
