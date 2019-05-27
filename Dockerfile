@@ -11,6 +11,9 @@ ENV SBT_HOME /usr/local/sbt
 ENV JAVA_OPTS -Xmx2G
 
 
+ADD ["https://raw.githubusercontent.com/LolHens/docker-tools/master/bin/cleanimage", "/usr/local/bin/"]
+RUN chmod +x "/usr/local/bin/cleanimage"
+
 RUN cd /tmp \
  && curl -LO $SBT_URL \
  && tar -xf $SBT_FILE \
@@ -19,10 +22,11 @@ RUN cd /tmp \
 
 ENV PATH $PATH:$SBT_HOME/bin
 
-RUN sbt 'set scalaVersion := "2.12.8"' compile \
+RUN pwd \
+ && mkdir src/main/scala \
+ && touch src/main/scala/init.scala \
+ && sbt 'set scalaVersion := "2.12.8"' compile \
  && cleanimage
 
 
 WORKDIR /root
-
-RUN sbt tasks
