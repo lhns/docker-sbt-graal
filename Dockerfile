@@ -22,8 +22,8 @@ RUN cd /tmp \
 
 ENV PATH $PATH:$SBT_HOME/bin
 
-RUN pwd \
- && mkdir src/main/scala \
+RUN cd /tmp \
+ && mkdir -p src/main/scala \
  && touch src/main/scala/init.scala \
  && sbt 'set scalaVersion := "2.12.8"' compile \
  && cleanimage
