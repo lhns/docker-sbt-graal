@@ -16,7 +16,7 @@ RUN chmod +x "/usr/local/bin/cleanimage"
 
 RUN yum install -y \
       jq \
-      perl-base \
+      perl \
  && gu install native-image \
  && cd /tmp \
  && curl -LO $SBT_URL \
