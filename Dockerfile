@@ -14,7 +14,9 @@ ENV JAVA_OPTS -Xmx2G
 ADD ["https://raw.githubusercontent.com/LolHens/docker-tools/master/bin/cleanimage", "/usr/local/bin/"]
 RUN chmod +x "/usr/local/bin/cleanimage"
 
-RUN yum install -y jq \
+RUN yum install -y \
+      jq \
+      perl \
  && gu install native-image \
  && cd /tmp \
  && curl -LO $SBT_URL \
