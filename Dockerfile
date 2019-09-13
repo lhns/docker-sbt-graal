@@ -2,7 +2,7 @@ FROM oracle/graalvm-ce
 MAINTAINER LolHens <pierrekisters@gmail.com>
 
 
-ENV SBT_VERSION 1.2.8
+ENV SBT_VERSION 1.3.0
 ENV SBT_NAME sbt
 ENV SBT_FILE $SBT_NAME-$SBT_VERSION.tgz
 ENV SBT_URL https://sbt-downloads.cdnedge.bluemix.net/releases/v$SBT_VERSION/$SBT_FILE
@@ -29,7 +29,7 @@ ENV PATH $PATH:$SBT_HOME/bin
 RUN cd /tmp \
  && mkdir -p src/main/scala \
  && touch src/main/scala/init.scala \
- && sbt 'set scalaVersion := "2.12.8"' compile \
+ && sbt 'set scalaVersion := "2.12.10"' compile \
  && cleanimage
 
 
