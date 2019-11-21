@@ -1,4 +1,4 @@
-FROM oracle/graalvm-ce:19.3.0-java11
+FROM oracle/graalvm-ce:19.3.0
 MAINTAINER LolHens <pierrekisters@gmail.com>
 
 
