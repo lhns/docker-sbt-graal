@@ -8,10 +8,13 @@ ENV SBT_FILE $SBT_NAME-$SBT_VERSION.tgz
 ENV SBT_URL https://sbt-downloads.cdnedge.bluemix.net/releases/v$SBT_VERSION/$SBT_FILE
 ENV SBT_HOME /usr/local/sbt
 
+ENV CLEANIMAGE_VERSION 2.0
+ENV CLEANIMAGE_URL https://raw.githubusercontent.com/LolHens/docker-cleanimage/$CLEANIMAGE_VERSION/cleanimage
+
 ENV JAVA_OPTS -Xmx2G
 
 
-ADD ["https://raw.githubusercontent.com/LolHens/docker-tools/master/bin/cleanimage", "/usr/local/bin/"]
+ADD ["$CLEANIMAGE_URL", "/usr/local/bin/"]
 RUN chmod +x "/usr/local/bin/cleanimage"
 
 RUN yum install -y \
