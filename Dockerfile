@@ -2,7 +2,7 @@ FROM oracle/graalvm-ce:20.1.0-java11
 MAINTAINER LolHens <pierrekisters@gmail.com>
 
 
-ENV SBT_VERSION 1.3.10
+ENV SBT_VERSION 1.3.12
 ENV SBT_NAME sbt
 ENV SBT_FILE $SBT_NAME-$SBT_VERSION.tgz
 ENV SBT_URL https://sbt-downloads.cdnedge.bluemix.net/releases/v$SBT_VERSION/$SBT_FILE
