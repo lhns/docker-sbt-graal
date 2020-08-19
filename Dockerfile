@@ -1,8 +1,8 @@
-FROM oracle/graalvm-ce:20.1.0-java11
+FROM oracle/graalvm-ce:20.2.0-java11
 MAINTAINER LolHens <pierrekisters@gmail.com>
 
 
-ENV SBT_VERSION 1.3.12
+ENV SBT_VERSION 1.3.13
 ENV SBT_NAME sbt
 ENV SBT_FILE $SBT_NAME-$SBT_VERSION.tgz
 ENV SBT_URL https://sbt-downloads.cdnedge.bluemix.net/releases/v$SBT_VERSION/$SBT_FILE
@@ -32,8 +32,8 @@ ENV PATH $PATH:$SBT_HOME/bin
 RUN cd /tmp \
  && mkdir -p src/main/scala \
  && touch src/main/scala/init.scala \
- && sbt 'set scalaVersion := "2.12.11"' compile \
- && sbt 'set scalaVersion := "2.13.2"' compile \
+ && sbt 'set scalaVersion := "2.12.12"' compile \
+ && sbt 'set scalaVersion := "2.13.3"' compile \
  && cleanimage
 
 
