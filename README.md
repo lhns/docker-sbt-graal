@@ -1,5 +1,5 @@
 # docker-sbt-graal
-[![Docker Build](https://img.shields.io/docker/build/lolhens/sbt-graal)](https://hub.docker.com/r/lolhens/sbt-graal/builds)
+[![Docker Build](https://img.shields.io/docker/cloud/build/lolhens/sbt-graal)](https://hub.docker.com/r/lolhens/sbt-graal/builds)
 [![Docker Stars](https://img.shields.io/docker/stars/lolhens/sbt-graal)](https://hub.docker.com/r/lolhens/sbt-graal)
 [![Docker Pulls](https://img.shields.io/docker/pulls/lolhens/sbt-graal)](https://hub.docker.com/r/lolhens/sbt-graal)
 [![Docker Image Size](https://img.shields.io/docker/image-size/lolhens/sbt-graal)](https://hub.docker.com/r/lolhens/sbt-graal)
