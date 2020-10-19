@@ -5,7 +5,7 @@ MAINTAINER LolHens <pierrekisters@gmail.com>
 ENV SBT_VERSION 1.4.0
 ENV SBT_NAME sbt
 ENV SBT_FILE $SBT_NAME-$SBT_VERSION.tgz
-ENV SBT_URL https://sbt-downloads.cdnedge.bluemix.net/releases/v$SBT_VERSION/$SBT_FILE
+ENV SBT_URL https://github.com/sbt/sbt/releases/download/v$SBT_VERSION/$SBT_FILE
 ENV SBT_HOME /usr/local/sbt
 
 ENV CLEANIMAGE_VERSION 2.0
