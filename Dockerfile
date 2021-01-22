@@ -1,4 +1,4 @@
-FROM oracle/graalvm-ce:21.0.0-java11
+FROM ghcr.io/graalvm/graalvm-ce:java11-1.0.0
 MAINTAINER LolHens <pierrekisters@gmail.com>
 
 
