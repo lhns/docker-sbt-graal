@@ -25,6 +25,7 @@ RUN microdnf install \
  && curl -SsfL "$JQ_URL" -o /usr/bin/jq \
  && chmod +x /usr/bin/jq \
  && gu install native-image \
+ && gu install nodejs \
  && cd /tmp \
  && curl -SsfLO "$SBT_URL" \
  && tar -xf "$SBT_FILE" \
