@@ -1,4 +1,4 @@
-name: build
+name: build commit
 
 on:
   push:
@@ -36,7 +36,7 @@ jobs:
           # Change all uppercase to lowercase
           IMAGE_ID=$(echo "$IMAGE_ID" | tr '[A-Z]' '[a-z]')
           # Set version to commit hash
-          VERSION="${GITHUB_SHA::6}"
+          VERSION="${GITHUB_SHA::8}"
           echo "$IMAGE_ID:$VERSION"
           docker tag "$IMAGE_NAME" "$IMAGE_ID:$VERSION"
           docker push "$IMAGE_ID:$VERSION"

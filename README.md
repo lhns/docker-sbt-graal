@@ -1,15 +1,11 @@
 # docker-sbt-graal
-[![Docker Build](https://img.shields.io/docker/cloud/build/lolhens/sbt-graal)](https://hub.docker.com/r/lolhens/sbt-graal/builds)
-[![Docker Stars](https://img.shields.io/docker/stars/lolhens/sbt-graal)](https://hub.docker.com/r/lolhens/sbt-graal)
-[![Docker Pulls](https://img.shields.io/docker/pulls/lolhens/sbt-graal)](https://hub.docker.com/r/lolhens/sbt-graal)
-[![Docker Image Size](https://img.shields.io/docker/image-size/lolhens/sbt-graal)](https://hub.docker.com/r/lolhens/sbt-graal)
-[![Docker Image Layers](https://img.shields.io/microbadger/layers/lolhens/sbt-graal)](https://hub.docker.com/r/lolhens/sbt-graal)
+[![Build Workflow](https://github.com/LolHens/RechnungsManagement/workflows/build%20release/badge.svg)](https://github.com/LolHens/RechnungsManagement/actions?query=workflow%3Abuild%20release)
 [![Apache License 2.0](https://img.shields.io/github/license/LolHens/docker-sbt-graal.svg?maxAge=3600)](https://www.apache.org/licenses/LICENSE-2.0)
 
 graalvm docker images with sbt
 
 ## Docker images
-https://hub.docker.com/r/lolhens/sbt-graal
+https://github.com/LolHens/docker-sbt-graal/pkgs/container/sbt-graal
 
 ## License
 This project uses the Apache 2.0 License. See the file called LICENSE.
