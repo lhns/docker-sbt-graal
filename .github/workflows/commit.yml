@@ -39,8 +39,6 @@ jobs:
           echo "$IMAGE_ID:$VERSION"
           docker tag "$IMAGE_NAME" "$IMAGE_ID:$VERSION"
           docker push "$IMAGE_ID:$VERSION"
-          docker tag "$IMAGE_NAME" "$IMAGE_ID:latest"
-          docker push "$IMAGE_ID:latest"
 
       - name: Log into Docker Hub
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
@@ -55,5 +53,3 @@ jobs:
           echo "$IMAGE_ID:$VERSION"
           docker tag "$IMAGE_NAME" "$IMAGE_ID:$VERSION"
           docker push "$IMAGE_ID:$VERSION"
-          docker tag "$IMAGE_NAME" "$IMAGE_ID:latest"
-          docker push "$IMAGE_ID:latest"
