@@ -1,8 +1,8 @@
-FROM ghcr.io/graalvm/graalvm-ce:java11-21.3.0
+FROM ghcr.io/graalvm/graalvm-ce:ol7-java11-22.0.0.2
 MAINTAINER LolHens <pierrekisters@gmail.com>
 
 
-ENV SBT_VERSION 1.5.5
+ENV SBT_VERSION 1.6.2
 ENV SBT_NAME sbt
 ENV SBT_FILE $SBT_NAME-$SBT_VERSION.tgz
 ENV SBT_URL https://github.com/sbt/sbt/releases/download/v$SBT_VERSION/$SBT_FILE
@@ -37,8 +37,8 @@ ENV PATH $PATH:$SBT_HOME/bin
 RUN cd /tmp \
  && mkdir -p src/main/scala \
  && touch src/main/scala/init.scala \
- && sbt 'set scalaVersion := "2.12.14"' compile \
- && sbt 'set scalaVersion := "2.13.6"' compile \
+ && sbt 'set scalaVersion := "2.12.15"' compile \
+ && sbt 'set scalaVersion := "2.13.8"' compile \
  && cleanimage
 
 
