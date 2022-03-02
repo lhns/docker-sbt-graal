@@ -27,8 +27,6 @@ RUN microdnf install \
  && chmod +x /usr/bin/jq \
  && gu install native-image \
  && gu install nodejs \
- && ln -s /opt/graalvm-*/bin/node /usr/bin/node \
- && ln -s /opt/graalvm-*/bin/npm /usr/bin/npm \
  && cd /tmp \
  && curl -SsfLO "$SBT_URL" \
  && tar -xf "$SBT_FILE" \
