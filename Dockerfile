@@ -21,12 +21,12 @@ ADD ["$CLEANIMAGE_URL", "/usr/local/bin/"]
 RUN chmod +x "/usr/local/bin/cleanimage"
 
 RUN microdnf install \
+      git \
       perl \
  && curl -SsfL "$JQ_URL" -o /usr/bin/jq \
  && chmod +x /usr/bin/jq \
  && gu install native-image \
  && gu install nodejs \
- && ln -s /opt/graalvm-*/bin/native-image /usr/bin/native-image \
  && ln -s /opt/graalvm-*/bin/node /usr/bin/node \
  && ln -s /opt/graalvm-*/bin/npm /usr/bin/npm \
  && cd /tmp \
