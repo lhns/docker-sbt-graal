@@ -1,4 +1,4 @@
-FROM ghcr.io/graalvm/graalvm-ce:ol8-java11-22.0.0.2
+FROM ghcr.io/graalvm/graalvm-ce:ol8-java17-22.0.0.2
 MAINTAINER LolHens <pierrekisters@gmail.com>
 
 
@@ -21,6 +21,7 @@ ADD ["$CLEANIMAGE_URL", "/usr/local/bin/"]
 RUN chmod +x "/usr/local/bin/cleanimage"
 
 RUN microdnf install \
+      git \
       perl \
  && curl -SsfL "$JQ_URL" -o /usr/bin/jq \
  && chmod +x /usr/bin/jq \
