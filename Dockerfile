@@ -1,4 +1,4 @@
-FROM ghcr.io/graalvm/graalvm-ce:ol8-java11-22.1.0
+FROM ghcr.io/graalvm/graalvm-ce:ol8-java17-22.1.0
 MAINTAINER lhns <pierrekisters@gmail.com>
 
 
