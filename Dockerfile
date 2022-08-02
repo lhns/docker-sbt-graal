@@ -2,7 +2,7 @@ FROM ghcr.io/graalvm/graalvm-ce:ol8-java17-22.2.0
 MAINTAINER lhns <pierrekisters@gmail.com>
 
 
-ENV SBT_VERSION 1.6.2
+ENV SBT_VERSION 1.7.1
 ENV SBT_NAME sbt
 ENV SBT_FILE $SBT_NAME-$SBT_VERSION.tgz
 ENV SBT_URL https://github.com/sbt/sbt/releases/download/v$SBT_VERSION/$SBT_FILE
