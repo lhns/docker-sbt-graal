@@ -2,13 +2,13 @@ FROM ghcr.io/graalvm/graalvm-ce:ol8-java17-22.3.1
 MAINTAINER lhns <pierrekisters@gmail.com>
 
 
-ENV SBT_VERSION 1.7.1
+ENV SBT_VERSION 1.8.2
 ENV SBT_NAME sbt
 ENV SBT_FILE $SBT_NAME-$SBT_VERSION.tgz
 ENV SBT_URL https://github.com/sbt/sbt/releases/download/v$SBT_VERSION/$SBT_FILE
 ENV SBT_HOME /usr/local/sbt
 
-ENV GOJQ_VERSION v0.12.8
+ENV GOJQ_VERSION v0.12.12
 ENV GOJQ_FILE gojq_${GOJQ_VERSION}_linux_amd64
 ENV GOJQ_URL https://github.com/itchyny/gojq/releases/download/$GOJQ_VERSION/${GOJQ_FILE}.tar.gz
 
@@ -38,8 +38,9 @@ ENV PATH $PATH:$SBT_HOME/bin
 RUN cd /tmp \
  && mkdir -p src/main/scala \
  && touch src/main/scala/init.scala \
- && sbt 'set scalaVersion := "2.12.15"' compile \
- && sbt 'set scalaVersion := "2.13.8"' compile \
+ && sbt 'set scalaVersion := "2.12.17"' compile \
+ && sbt 'set scalaVersion := "2.13.10"' compile \
+ && sbt 'set scalaVersion := "3.2.2"' compile \
  && cleanimage
 
 
