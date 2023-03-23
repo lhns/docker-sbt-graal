@@ -1,4 +1,4 @@
-FROM ghcr.io/graalvm/graalvm-ce:ol8-java11-22.2.0
+FROM ghcr.io/graalvm/graalvm-ce:ol8-java11-22.3.1
 MAINTAINER lhns <pierrekisters@gmail.com>
 
 
@@ -8,7 +8,7 @@ ENV SBT_FILE $SBT_NAME-$SBT_VERSION.tgz
 ENV SBT_URL https://github.com/sbt/sbt/releases/download/v$SBT_VERSION/$SBT_FILE
 ENV SBT_HOME /usr/local/sbt
 
-ENV GOJQ_VERSION v0.12.7
+ENV GOJQ_VERSION v0.12.8
 ENV GOJQ_FILE gojq_${GOJQ_VERSION}_linux_amd64
 ENV GOJQ_URL https://github.com/itchyny/gojq/releases/download/$GOJQ_VERSION/${GOJQ_FILE}.tar.gz
 
