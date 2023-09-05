@@ -1,4 +1,4 @@
-FROM ghcr.io/graalvm/graalvm-ce:ol8-java17-22.3.2
+FROM ghcr.io/graalvm/graalvm-ce:ol8-java17-22.3.3
 MAINTAINER lhns <pierrekisters@gmail.com>
 
 ENV SBT_VERSION 1.9.4
