@@ -7,7 +7,7 @@ ENV SBT_FILE $SBT_NAME-$SBT_VERSION.tgz
 ENV SBT_URL https://github.com/sbt/sbt/releases/download/v$SBT_VERSION/$SBT_FILE
 ENV SBT_HOME /usr/local/sbt
 
-ENV JQ_VERSION 1.7rc2
+ENV JQ_VERSION 1.7
 ENV JQ_URL https://github.com/jqlang/jq/releases/download/jq-${JQ_VERSION}/jq-linux-amd64
 
 ENV CLEANIMAGE_VERSION 2.0
