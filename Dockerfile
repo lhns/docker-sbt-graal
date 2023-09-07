@@ -1,4 +1,4 @@
-FROM ghcr.io/graalvm/native-image-community:17.0.8
+FROM ghcr.io/graalvm/native-image-community:20.0.2
 MAINTAINER lhns <pierrekisters@gmail.com>
 
 ENV SBT_VERSION 1.9.4
