@@ -1,7 +1,7 @@
-FROM ghcr.io/graalvm/graalvm-community:17.0.8
+FROM ghcr.io/graalvm/graalvm-community:21.0.0
 MAINTAINER lhns <pierrekisters@gmail.com>
 
-ENV SBT_VERSION 1.9.4
+ENV SBT_VERSION 1.9.6
 ENV SBT_NAME sbt
 ENV SBT_FILE $SBT_NAME-$SBT_VERSION.tgz
 ENV SBT_URL https://github.com/sbt/sbt/releases/download/v$SBT_VERSION/$SBT_FILE
@@ -16,11 +16,9 @@ ENV CLEANIMAGE_URL https://raw.githubusercontent.com/lhns/docker-cleanimage/$CLE
 ADD ["$CLEANIMAGE_URL", "/usr/bin/"]
 RUN chmod +x "/usr/bin/cleanimage"
 
-RUN microdnf install git perl \
+RUN microdnf install git nodejs perl \
  && curl -sSfLo /usr/bin/jq -- "$JQ_URL" \
  && chmod +x /usr/bin/jq \
- && gu install native-image \
- && gu install nodejs \
  && cd /tmp \
  && curl -sSfLO -- "$SBT_URL" \
  && tar -xf "$SBT_FILE" \
@@ -33,8 +31,8 @@ RUN cd /tmp \
  && mkdir -p src/main/scala \
  && touch src/main/scala/init.scala \
  && sbt 'set scalaVersion := "2.12.18"' compile \
- && sbt 'set scalaVersion := "2.13.11"' compile \
- && sbt 'set scalaVersion := "3.3.0"' compile \
+ && sbt 'set scalaVersion := "2.13.12"' compile \
+ && sbt 'set scalaVersion := "3.3.1"' compile \
  && cleanimage
 
 WORKDIR /root
