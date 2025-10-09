@@ -70,6 +70,10 @@ jobs:
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
 
       - name: Push image to Docker Hub
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
+        if: ${{ env.GITHUB_TOKEN && env.DOCKERHUB_TOKEN }}
         run: |
           IMAGE_ID="${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE_NAME"
 
@@ -92,3 +96,4 @@ jobs:
 
           for TAG in "${TAGS[@]}"; do docker tag "$IMAGE_NAME" "$IMAGE_ID:$TAG"; done
           for TAG in "${TAGS[@]}"; do docker push "$IMAGE_ID:$TAG"; done
+
