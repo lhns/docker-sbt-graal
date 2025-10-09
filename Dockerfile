@@ -1,13 +1,13 @@
 FROM ghcr.io/graalvm/graalvm-community:22.0.1
 MAINTAINER lhns <pierrekisters@gmail.com>
 
-ENV SBT_VERSION 1.9.8
+ENV SBT_VERSION 1.11.7
 ENV SBT_NAME sbt
 ENV SBT_FILE $SBT_NAME-$SBT_VERSION.tgz
 ENV SBT_URL https://github.com/sbt/sbt/releases/download/v$SBT_VERSION/$SBT_FILE
 ENV SBT_HOME /usr/local/sbt
 
-ENV JQ_VERSION 1.7.1
+ENV JQ_VERSION 1.8.1
 ENV JQ_URL https://github.com/jqlang/jq/releases/download/jq-${JQ_VERSION}/jq-linux-amd64
 
 ENV CLEANIMAGE_VERSION 2.0
@@ -30,9 +30,9 @@ ENV PATH $PATH:$SBT_HOME/bin
 RUN cd /tmp \
  && mkdir -p src/main/scala \
  && touch src/main/scala/init.scala \
- && sbt 'set scalaVersion := "2.12.18"' compile \
- && sbt 'set scalaVersion := "2.13.12"' compile \
- && sbt 'set scalaVersion := "3.3.1"' compile \
+ && sbt 'set scalaVersion := "2.12.20"' compile \
+ && sbt 'set scalaVersion := "2.13.17"' compile \
+ && sbt 'set scalaVersion := "3.7.3"' compile \
  && cleanimage
 
 WORKDIR /root
