@@ -30,12 +30,11 @@ ENV PATH $PATH:$SBT_HOME/bin
 RUN cd /tmp \
  && mkdir -p src/main/scala \
  && touch src/main/scala/init.scala \
- && touch build.sbt \
- && sbt 'set scalaVersion := "2.12.20"' compile \
- && sbt 'set scalaVersion := "2.13.17"' compile \
- && sbt 'set scalaVersion := "3.7.3"' compile \
+ && sbt --allow-empty 'set scalaVersion := "2.12.20"' compile \
+ && sbt --allow-empty 'set scalaVersion := "2.13.17"' compile \
+ && sbt --allow-empty 'set scalaVersion := "3.7.3"' compile \
  && cleanimage
 
 WORKDIR /root
 
-RUN sbt tasks
+RUN sbt --allow-empty tasks
