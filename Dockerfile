@@ -1,4 +1,4 @@
-FROM ghcr.io/graalvm/graalvm-community:25.0.0
+FROM ghcr.io/graalvm/graalvm-community:25.0.2
 MAINTAINER lhns <pierrekisters@gmail.com>
 
 ENV SBT_VERSION 1.11.7
